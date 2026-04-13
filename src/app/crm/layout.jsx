@@ -1,11 +1,11 @@
 import React from 'react'
 
-function page() {
+function layout({ children }) {
   return (
-    <div>
-      
+    <div >
+      {children}
     </div>
   )
 }
 
-export default page
+export default layout
