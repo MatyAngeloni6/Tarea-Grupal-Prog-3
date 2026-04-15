@@ -32,7 +32,7 @@ function layout({ children }) {
         </aside>
         <div className='flex flex-col flex-1'>
           <Header />
-          <main className="flex-1 bg-white">
+          <main className="flex-1 bg-white p-10">
             {children}
           </main>
           <Footer />
