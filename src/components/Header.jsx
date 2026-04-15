@@ -2,13 +2,9 @@ import { User, Bell } from 'lucide-react';
 
 export default function Header() {
   return (
-    <header className="flex h-16 w-full items-center justify-between border-b bg-white px-8 shadow-sm">
-      <div className="flex items-center">
-        <span className="text-2xl font-extrabold text-[#001d3d] tracking-tight">CRM</span>
-      </div>
-
+    <header className="flex h-16 w-full items-center justify-end border-b border-gray-300 bg-white px-8 shadow-sm">
       <div className="flex items-center gap-6">
-        <button className="text-slate-400 hover:text-blue-600 transition-colors">
+        <button className="text-slate-400 hover:text-blue-600 transition-colors cursor-pointer">
           <Bell size={20} />
         </button>
         
