@@ -1,53 +1,72 @@
-import React from 'react'
-
+import React from "react";
+import Link from "next/link";
 
 function page() {
   return (
-    <main className="flex min-h-screen max-h-screen items-center justify-center bg-white ">
-    <section className=" bg-white">
-    <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-      <text className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+    <div className="flex min-h-screen items-center justify-center bg-gray-50 px-4">
+      <section className="w-full max-w-md">
+        <div className="bg-white shadow-2xl border-t-4 border-[#001B44] rounded-xl p-8">
+          <header className="mb-8 text-center">
+            <h1 className="text-2xl font-extrabold tracking-tight text-[#001B44] md:text-3xl">
+              Iniciar sesión
+            </h1>
+            <p className="text-gray-500 text-sm mt-2">Ingresá tus credenciales para continuar</p>
+          </header>
 
-      </text>
-      <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 bg-white">
-          <div className="shadow-xl border-t-4 border-[#001B44] rounded-t-lg p-6 space-y-4 md:space-y-6 sm:p-8">
-              <h1 className="text-xl font-bold leading-tight tracking-tight text-[#001B44] md:text-2xl text-center mb-10">
-                  Iniciar sesión
-              </h1>
-              <form className="space-y-4 md:space-y-6" action="#">
-                  <div> 
-                    <p className="p-1 text-sm font-medium text-[#434750]">CUIT</p>
-                    <div className="flex items-center gap-2">
-                      <label htmlFor="email" className="item-center flex gap-2 block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+          <form className="space-y-5" action="#">
+            <div>
+              <label 
+                htmlFor="cuit" 
+                className="block mb-1.5 text-xs font-bold uppercase tracking-wider text-[#434750]"
+              >
+                CUIT
+              </label>
+              <input
+                type="text"
+                name="cuit"
+                id="cuit"
+                className="w-full p-3 bg-gray-50 border border-gray-200 text-gray-900 rounded-lg focus:ring-2 focus:ring-[#001B44] focus:border-transparent outline-none transition-all placeholder:text-gray-400"
+                placeholder="20-XXXXXXXX-X"
+              />
+            </div>
 
-                      <input type="email" name="email" id="email" className=" text-gray-900 bg-gray-100 border border-gray-300  rounded-lg focus:border-primary-600 w-full p-2.5 dark:placeholder-gray-400" placeholder="20-XXXXXXXX-X" required=""/>
-                    </div>
-                  </div>
-                  <div>
+            <div>
+              <div className="flex justify-between items-center mb-1.5">
+                <label 
+                  htmlFor="password" 
+                  className="text-xs font-bold uppercase tracking-wider text-[#434750]"
+                >
+                  Contraseña
+                </label>
+                <Link
+                  href="/forgot-password"
+                  className="text-xs font-semibold text-[#3269E6] hover:underline"
+                >
+                  ¿Olvidó su contraseña?
+                </Link>
+              </div>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="••••••••"
+                className="w-full p-3 bg-gray-50 border border-gray-200 text-gray-900 rounded-lg focus:ring-2 focus:ring-[#001B44] focus:border-transparent outline-none transition-all"
+              />
+            </div>
 
-                    <div className="flex justify-between items-center w-full">
-                      <p className="p-1 text-sm  text-[#434750]">CONTRASEÑA</p>
-                      <a href="/forgot-password" className="text-sm font-medium  hover:underline text-[#3269E6]">Olvido su contraseña?</a>
-                    </div>
-
-
-                    <div className="flex items-center gap-2">
-                      <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
-                      
-                      <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-100 border border-gray-300 rounded-lg block w-full p-2.5 dark:placeholder-gray-400 text-gray-900" required=""/>
-                    </div>
-                  </div>
-
-                  <button type="submit" className="hover:scale-105 w-full text-white bg-[#001B44] hover:bg-[#001B44] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 cursor-pointer">Iniciar sesión</button>
-                  
-              </form>
-          </div>
-      </div>
-  </div>
-</section>
-
-    </main>
-  )
+            <div className="pt-2 w-full">
+              <Link
+                href="/crm"
+                className="block w-full text-center bg-[#001B44] text-white font-bold py-3 px-4 rounded-lg hover:bg-[#052c67] active:scale-[0.98] transition-all shadow-lg shadow-blue-900/20"
+              >
+                Ingresar al sistema
+              </Link>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  );
 }
 
-export default page
+export default page;
