@@ -17,7 +17,7 @@ function grilla() {
   ]
   return (
     <div>
-      <section className=' text-black  shadow-md rounded-lg '>
+      <section className=' text-black  shadow-lg rounded-lg '>
          <div className='max-h-[400px] overflow-y-auto rounded-lg '>
            <table className="w-full table-auto border-collapse rounded-lg ">
              <thead className="text-sm font-semibold bg-[#d8dde3] text-black ">
@@ -58,8 +58,8 @@ function grilla() {
                    <td className='px-4 py-2 border-b border-zinc-600'>
                      <span className={`px-2 py-1 rounded text-xs font-medium ${
                        user.activo === "Activo"
-                         ? "bg-green-500/20 text-green-400"
-                         : "bg-red-500/20 text-red-400"
+                         ? "bg-green-600/20 text-green-500"
+                         : "bg-red-600/20 text-red-500"
                      }`}>
                        {user.activo }
                      </span>
