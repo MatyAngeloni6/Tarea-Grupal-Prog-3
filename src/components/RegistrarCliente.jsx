@@ -1,4 +1,5 @@
 import { Building2, IdCard, Mail, Phone, ChevronDown } from 'lucide-react';
+import Link from 'next/link';
 
 export default function RegistrarCliente() {
   return (
@@ -7,7 +8,7 @@ export default function RegistrarCliente() {
       <p className="text-sm text-gray-500 mb-8">Complete la información legal y de contacto para dar de alta al nuevo integrante de la cartera.</p>
       
       <form className="space-y-6">
-        <div>
+        <div className='text-black'>
           <label className="text-xs font-bold text-gray-400 uppercase">Razón Social</label>
           <div className="relative mt-1">
             <Building2 className="absolute left-3 top-3 text-gray-400" size={18} />
@@ -15,7 +16,7 @@ export default function RegistrarCliente() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4 text-black">
           <div>
             <label className="text-xs font-bold text-gray-400 uppercase">CUIT/CUIL</label>
             <div className="relative mt-1">
@@ -27,12 +28,11 @@ export default function RegistrarCliente() {
             <label className="text-xs font-bold text-gray-400 uppercase">Estado</label>
             <div className="relative mt-1">
               <input type="text" value="Activo" readOnly className="w-full bg-gray-100 border-none rounded-md py-3 pl-4 pr-10 font-medium" />
-              <ChevronDown className="absolute right-3 top-3 text-gray-400" size={18} />
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4 text-black">
           <div>
             <label className="text-xs font-bold text-gray-400 uppercase">Correo Electrónico</label>
             <div className="relative mt-1">
@@ -50,8 +50,8 @@ export default function RegistrarCliente() {
         </div>
 
         <div className="flex justify-between items-center pt-4">
-          <button type="button" className="text-gray-500 font-medium hover:underline">Cancelar</button>
-          <button type="submit" className="bg-[#001d3d] text-white px-10 py-3 rounded-md font-bold hover:bg-blue-900 transition-colors">Guardar Cliente</button>
+          <Link href="/crm/customer" className="text-gray-500 font-medium hover:underline cursor-pointer">Cancelar</Link>
+          <button type="submit" className="bg-[#001d3d] text-white px-10 py-3 rounded-md font-bold hover:bg-blue-900 transition-colors cursor-pointer">Guardar Cliente</button>
         </div>
       </form>
     </div>
