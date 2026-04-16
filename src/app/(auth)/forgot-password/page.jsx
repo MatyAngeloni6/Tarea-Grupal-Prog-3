@@ -2,10 +2,11 @@ import React from 'react'
 
 function page() {
   return (
-    <div>
-      forgot
+    <div >
+
+
     </div>
   )
-}
+} 
 
 export default page
