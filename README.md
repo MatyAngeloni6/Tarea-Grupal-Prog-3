@@ -13,7 +13,7 @@ Sistema de gestión para la administración de cocheras que permite controlar el
 ### 👨‍💻 Integrantes
 | Nombre y Apellido | GitHub / Contacto |
 | :--- | :--- |
-| **Facundo Rullo** | [@FacuuR001](https://github.com/FacuuR001) | (Team Lead)
+| **Facundo Rullo** (Team Lead) | [@FacuuR001](https://github.com/FacuuR001) | 
 | **Anabella Villaverde** | [@anabellavillaverde](https://github.com/anabellavillaverde) |
 | **Matias Angeloni** | [@matias0073](https://github.com/matias0073) |
 | **Valentina Alaniz** | [@valeeAlaniz](https://github.com/valeeAlaniz) |
